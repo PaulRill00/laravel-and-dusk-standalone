@@ -1,6 +1,10 @@
 # Forked
 https://github.com/konsulting/dusk-standalone
 
+
+# Testing VUE components
+https://laravel.com/docs/9.x/dusk#assert-vue
+
 # Dusk Standalone
 
 A simple package to use [Laravel Dusk](https://github.com/laravel/dusk) with [PHPUnit](https://phpunit.de) outside of a [Laravel](https://laravel.com) application for browser testing.

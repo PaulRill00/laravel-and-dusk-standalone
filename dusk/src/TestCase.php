@@ -101,7 +101,7 @@ abstract class TestCase extends BaseTestCase
      */
     protected function browserTestsPath()
     {
-        return ProjectRoot::forPackage('dusk-standalone')->resolve(__DIR__).'/tests/Browser';
+        return ProjectRoot::forPackage('dusk')->resolve(__DIR__).'/tests/Browser';
     }
 
     /**
