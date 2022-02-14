@@ -1,3 +1,6 @@
+# Forked
+https://github.com/konsulting/dusk-standalone
+
 # Dusk Standalone
 
 A simple package to use [Laravel Dusk](https://github.com/laravel/dusk) with [PHPUnit](https://phpunit.de) outside of a [Laravel](https://laravel.com) application for browser testing.
