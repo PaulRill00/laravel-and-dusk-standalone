@@ -1,0 +1,33 @@
+language: php
+
+sudo: required
+
+dist: xenial
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+
+addons:
+  chrome: stable
+
+env:
+  global:
+    - setup=basic
+
+before_script:
+  - composer config discard-changes true
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
+  - ./vendor/bin/dusk-updater detect --auto-update
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+
+matrix:
+  include:
+    - php: 7.2
+      env: setup=lowest
+    - php: 7.2
+      env: setup=stable
+  fast_finish: true
