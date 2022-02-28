@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ExampleController;
-use App\Http\Controllers\ExampleController2;
+use App\Http\Controllers\CounterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +19,6 @@ Route::resource('/', ExampleController::class)->only([
   'index', 'create', 'store'
 ]);
 
-// Route::resource('/', ExampleController2::class)->only([
-//   'index'
-// ]);
+Route::resource('counter', CounterController::class)->only([
+  'index'
+]);

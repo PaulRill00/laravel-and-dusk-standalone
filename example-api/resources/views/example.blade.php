@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Example page</title>
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-    <h1>Example page</h1>
+    <h1>Demo app</h1>
 
-    <a id="create-btn" href="/create">create</a>
+    <a id="start-btn" class="btn" href="/create">Start</a>
 </body>
 </html>

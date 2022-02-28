@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  padding: .4rem .6rem;
+  width: fit-content;
+  background-color: darkcyan;
+  border-radius: 5px;
+  color: white;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+  
+  border: none;
+  outline: none;
+}
+.btn:hover {
+  background-color: cyan;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: fit-content;
+  margin: auto 0;
+  
+  text-align: center;
+
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}

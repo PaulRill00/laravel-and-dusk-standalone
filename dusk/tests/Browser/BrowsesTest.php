@@ -15,35 +15,41 @@ class BrowsesTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             // Go to the home page
-            $browser->visit('/')->assertSee('Example page');
+            $browser->visit('/')->assertSee('Demo app');
+            sleep(1);
 
             // Redirect to the /create page
-            $browser->click('#create-btn')->assertSee('Creating...');
+            $browser->click('#start-btn')->assertSee('Create User...');
+            sleep(1);
 
             // Fill out the username in the input
             $browser->typeSlowly('username', 'test username');
 
             // Click on the submit button
             $browser->press('send');
+            sleep(1);
 
             // Test if the submitted username is in the header
             $browser->assertSee('Created username: test username');
+            sleep(1);
 
             // Redirect back to the home screen
-            $browser->click('#back-btn')->assertSee('Example page');
+            $browser->click('#back-btn')->assertSee('Demo app');
         });
     }
 
     /**
-     * 
-     * Test if the example2 page can use the counter buttons
+     * @test
+     * Test if the counter page can use the counter buttons
      */
     public function can_use_count_btns()
     {
         $this->browse(function (Browser $browser) {
             // Go to the page
-            $browser->visit('/')->assertSee('Example page 2');
+            $browser->visit('counter')->assertSee('Counter page');
             $browser->assertSee('Current count: 0');
+
+            sleep(1);
 
             // Increase count
 
